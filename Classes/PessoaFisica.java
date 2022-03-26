@@ -3,6 +3,12 @@ import java.io.Serializable;
 class PessoaFisica extends Parceiro implements Serializable{
   private String nome, cpf, senha;
 
+  public PessoaFisica(String nome, String cpf, String senha){
+    setNome(nome);
+    setCPF(cpf);
+    setSenha(senha);
+  }
+  
   public PessoaFisica(){
     setNome(JOptionPane.showInputDialog("Digite o nome: "));
     setCPF(JOptionPane.showInputDialog("Digite o CPF: "));

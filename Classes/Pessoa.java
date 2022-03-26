@@ -5,6 +5,20 @@ class Pessoa implements Serializable{
   private boolean empregado;
   private double salario;
 
+  public Pessoa(String nome, String cpf, String dataNascimento, String sexo, String escolaridade, String deficiencia, String estadoCivil, String autoDeclaracao, boolean empregado, double salario, String senha){
+    setNome(nome);
+    setCPF(cpf);
+    setDataNascimento(dataNascimento);
+    setSexo(sexo);
+    setEscolaridade(escolaridade);
+    setEstadoCivil(estadoCivil);
+    setDeficiencia(deficiencia);
+    setAutoDeclaracao(autoDeclaracao);
+    setEmpregado(empregado);
+    setSalario(salario);
+    setSenha(senha);
+  }
+  
 
   public Pessoa(){
       setNome(JOptionPane.showInputDialog("Digite seu nome:"));
@@ -39,7 +53,7 @@ class Pessoa implements Serializable{
   public void setDataNascimento(String dataNascimento){
     this.dataNascimento = dataNascimento;
   }
-  public String getDataNasciemento(){
+  public String getDataNascimento(){
     return this.dataNascimento;
   }
   public void setSexo(String sexo){

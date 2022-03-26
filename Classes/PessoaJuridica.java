@@ -3,6 +3,12 @@ import java.io.Serializable;
 class PessoaJuridica extends Parceiro implements Serializable{
   private String cnpj, razaoSocial, senha;
 
+  public PessoaJuridica(String cnpj, String razaoSocial, String senha){
+    setCNPJ(cnpj);
+    setRazaoSocial(razaoSocial);
+    setSenha(senha);
+  }
+  
   public PessoaJuridica(){
     setCNPJ(JOptionPane.showInputDialog("Digite o CNPJ: "));
     setRazaoSocial(JOptionPane.showInputDialog("Digite a razão social: "));

@@ -3,6 +3,12 @@ import java.io.Serializable;
 class Voluntario implements Serializable{
  private String nome, cpf, senha;
 
+  public Voluntario(String nome, String cpf, String senha){
+    setNome(nome);
+    setCPF(cpf);
+    setSenha(senha);
+  }
+  
   public Voluntario(){
     setNome(JOptionPane.showInputDialog("Digite o nome:"));
     setCPF(JOptionPane.showInputDialog("Digite o CPF:"));

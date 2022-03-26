@@ -4,7 +4,9 @@ class Familia extends Recebedor implements Serializable{
   ArrayList<Pessoa> membros = new ArrayList<Pessoa>();
   Pessoa responsavel;
   
-  public Familia(){}
+  public Familia(ArrayList<Pessoa> membros){
+    this.membros = membros;
+  }
 
   public Familia(int membrosFamilia){
     int i = 0;
@@ -34,7 +36,7 @@ class Familia extends Recebedor implements Serializable{
     return renda;
   }
 
-  int quantidadeMebros(){
+  public int quantidadeMembros(){
     return this.membros.size();
   }
 }
